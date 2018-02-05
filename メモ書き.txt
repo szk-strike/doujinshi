@@ -1,0 +1,78 @@
+﻿他コンポーネントと何の結合もしないテキストです
+メモ帳やSQLクエリの仮置き場に使ってください
+
+テーブルの一覧を取得
+.tables
+
+テーブルを削除
+DROP TABLE テーブル名;
+
+外部キー制約の有効化
+PRAGMA foreign_keys = ON;
+
+レコードの一覧を取得
+SELECT *　FROM テーブル名
+
+大元のテーブル作成
+CREATE TABLE IF NOT EXISTS t_doujinshi(
+	ID INTEGER PRIMARY KEY NOT NULL,
+	title TEXT NOT NULL,
+	origin_ID INTEGER NOT NULL,
+	genre_ID INTEGER NOT NULL,
+	age_limit INTEGER NOT NULL,
+	date TEXT,
+	main_chara TEXT,
+	place INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS t_origin(
+	origin_ID INTEGER PRIMARY KEY NOT NULL,
+	origin_title TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS t_genre(
+	genre_ID INTEGER PRIMARY KEY NOT NULL,
+	genre_title TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS t_author(
+	ID INTEGER NOT NULL,
+	author TEXT,
+	FOREIGN KEY(ID) REFERENCES t_doujinshi(ID) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS t_circle(
+	ID INTEGER NOT NULL,
+	circle TEXT,
+	FOREIGN KEY(ID) REFERENCES t_doujinshi(ID) ON DELETE CASCADE
+);
+
+同人誌テーブルに新規データ追加時は、プログラム側で作者テーブル、サークルテーブルにもINSERTクエリを出す
+
+.NET Flamewokのverによってhttp://www.sqlite.org/download.htmlからマシンに応じたドライバをインストール
+ver確認方法はhttps://msdn.microsoft.com/ja-jp/library/hh925568(v=vs.110).aspxを参照
+using System.Data.SQLite;を追加
+もう面倒くさいからdll単体で実行ファイルのディレクトリにぶち込んどこう
+コネクション記述の参考ページ
+http://park.geocities.jp/gdfsm000/cs/cs603.html
+
+INSERTテスト用
+INSERT INTO t_doujinshi(
+ID,
+title,
+origin_ID,
+genre_ID,
+age_limit,
+date,
+main_chara,
+place
+)VALUES(
+1,
+'慧音先生の情報リテラシー講座',
+1,
+1,
+1,
+'20180205',
+'上白沢慧音',
+1
+);

@@ -1,0 +1,13 @@
+c:\users\shunki\documents\visual studio 2015\Projects\同人誌管理\bin\Debug\同人誌管理.exe.config
+C:\Users\Shunki\documents\visual studio 2015\Projects\同人誌管理\bin\Debug\同人誌管理.exe
+C:\Users\Shunki\documents\visual studio 2015\Projects\同人誌管理\bin\Debug\同人誌管理.pdb
+C:\Users\Shunki\documents\visual studio 2015\Projects\同人誌管理\obj\Debug\同人誌管理.csprojResolveAssemblyReference.cache
+C:\Users\Shunki\documents\visual studio 2015\Projects\同人誌管理\obj\Debug\同人誌管理.Properties.Resources.resources
+C:\Users\Shunki\documents\visual studio 2015\Projects\同人誌管理\obj\Debug\同人誌管理.top.resources
+C:\Users\Shunki\documents\visual studio 2015\Projects\同人誌管理\obj\Debug\同人誌管理.csproj.GenerateResource.Cache
+C:\Users\Shunki\documents\visual studio 2015\Projects\同人誌管理\obj\Debug\同人誌管理.exe
+C:\Users\Shunki\documents\visual studio 2015\Projects\同人誌管理\obj\Debug\同人誌管理.pdb
+C:\Users\Shunki\documents\visual studio 2015\Projects\同人誌管理\obj\Debug\同人誌管理.add.resources
+C:\Users\Shunki\documents\visual studio 2015\Projects\同人誌管理\obj\Debug\同人誌管理.detail_search.resources
+C:\Users\Shunki\documents\visual studio 2015\Projects\同人誌管理\obj\Debug\同人誌管理.tabele_manage.resources
+C:\Users\Shunki\documents\visual studio 2015\Projects\同人誌管理\bin\Debug\System.Data.SQLite.dll
